@@ -1,0 +1,10 @@
+#!/bin/bash
+#Marshall’s fregrid combining script
+
+conda deactivate
+ml load netcdf/4.4.1.1
+ml load gcc/10.1.0
+
+Set -e
+
+fregrid --input_mosaic C96_mosaic.nc --input_file 19790101.atmos_daily.nc --output_file dailyT_U_Hum_Omega.nc --scalar_field temp, ucomp, sphum, omega --nthreads 6 --nlon 144 --nlat 90 --debug
