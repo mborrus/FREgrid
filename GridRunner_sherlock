@@ -4,4 +4,4 @@
 ml load netcdf/4.4.1.1
 ml load gcc/10.1.0
 
-fregrid --input_mosaic C96_mosaic.nc --input_file 19790101.atmos_daily.nc --output_file dailyUTco2.nc --scalar_field ucomp,temp,rrvco2 --nthreads 6 --nlon 144 --nlat 90 --debug
+fregrid --input_mosaic C96_mosaic.nc --input_file 19790101.atmos_daily.nc.* --output_file dailyUTco2.nc --scalar_field ucomp,temp,rrvco2 --nthreads 6 --nlon 144 --nlat 90 --debug
